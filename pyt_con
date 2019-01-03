@@ -1,0 +1,1 @@
+[ps-aux |grep 'python3  pyt' |grep -v "grep" |wc -l` -eq 1 ] || echo "fail"

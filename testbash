@@ -1,0 +1,58 @@
+#! /bin/bash
+
+echo "hello"
+echo "word"
+echo "word"
+country=100
+name="sunjian"
+echo $country
+echo ${country}
+echo "i love ${country} abdc"
+readonly chain="read"
+unset name
+echo $name
+dir=`pwd`
+echo "\n\n\n" 
+echo $dir
+echo ${name:-"sundongjian"}
+echo $name
+echo ${name:="sundongjian-mmmm"}
+echo $name
+a=10
+b=12
+echo [$a == $b ]
+echo ${#name}
+echo [$a == $b]
+expr $a == $b
+expr [$a==$b]
+if  [ $a !=  $b ]
+then 
+    echo 'hhh'
+fi
+string='adbcdsdf'
+echo ${#string}
+echo ${string:1:3}
+string="sdflsdfj is sdjflsdfjlsdjf"
+echo `expr index "$string" is`
+basename /home/sunjian/mm.txt 
+basename -a -s /home/sunjian/nn.txt /home/ss.nn  /ss/ll.sse
+basename -s .df  /home/sss/sunjian.df
+dirname /usr/sunjian/hh.mm
+array_name=("sunjian" "sundongjian")
+echo ${array_name[0]}
+
+echo ${array_name[*]}
+
+echo ${array_name[@]}
+printf "%d %s \n" 1 "abd" 1 "ddd" 3 "eee"
+
+for loop in 1 2 3 4 5
+do
+    echo "The value is: $loop"
+done
+for file in $HOME/
+do 
+    echo $file
+done
+
+
